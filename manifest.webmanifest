@@ -1,0 +1,20 @@
+{
+  "name": "Devanshu Brahmbhatt",
+  "short_name": "Devanshu",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A Portfolio.",
+  "icons": [
+    {
+      "src": "images/mine.jpg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "images/mine.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
