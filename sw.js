@@ -18,27 +18,36 @@ const filesToCache = [
     );
   });
 
-  self.addEventListener('fetch', event => {
-    console.log('Fetch event for ', event.request.url);
-    event.respondWith(
-      caches.match(event.request)
+  
+
+self.addEventListener('fetch', event => {
+  console.log('Fetch event for ', event.request.url);
+  event.respondWith(
+    caches.match(event.request)
+    .then(response => {
+      if (response) {
+        console.log('Found ', event.request.url, ' in cache');
+        return response;
+      }
+      console.log('Network request for ', event.request.url);
+      return fetch(event.request)
       .then(response => {
-        if (response) {
-          console.log('Found ', event.request.url, ' in cache');
-          return response;
+        if (response.status === 404) {
+          return caches.match('pages/404.html');
         }
-        console.log('Network request for ', event.request.url);
-        return fetch(event.request)
-  
-        // TODO 4 - Add fetched files to the cache
-  
-      }).catch(error => {
-  
-        // TODO 6 - Respond with custom offline page
-  
-      })
-    );
-  });
+        return caches.open(staticCacheName)
+        .then(cache => {
+          cache.put(event.request.url, response.clone());
+          return response;
+        });
+      });
+    }).catch(error => {
+      console.log('Error, ', error);
+      return caches.match('pages/offline.html');
+    })
+  );
+});
+
 
   self.addEventListener('activate', event => {
     console.log('Activating new service worker...');
