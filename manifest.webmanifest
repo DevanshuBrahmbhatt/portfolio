@@ -4,6 +4,7 @@
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
+   "theme_color": "#ea6a43",
   "description": "A Portfolio.",
   "icons": [
     {
