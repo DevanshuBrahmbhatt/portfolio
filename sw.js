@@ -1,8 +1,8 @@
 const filesToCache = [
     '/',
-    'css/style.css',
-    'images/mine.jpg',
-    'index.html',
+    './css/style.css',
+    './images/mine.jpg',
+    './index.html',
 
   ];
   
@@ -33,7 +33,7 @@ self.addEventListener('fetch', event => {
       return fetch(event.request)
       .then(response => {
         if (response.status === 404) {
-          return caches.match('index.html');
+          return caches.match('./index.html');
         }
         return caches.open(staticCacheName)
         .then(cache => {
@@ -43,7 +43,7 @@ self.addEventListener('fetch', event => {
       });
     }).catch(error => {
       console.log('Error, ', error);
-      return caches.match('index.html');
+      return caches.match('./index.html');
     })
   );
 });
