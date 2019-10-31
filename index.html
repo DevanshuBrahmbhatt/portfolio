@@ -632,7 +632,7 @@ We developed a website using Django and used Mateailize CSS for styling and resp
    </footer>
    </div>
 	
-	<script>
+<!--	<script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw.js')
@@ -644,7 +644,20 @@ We developed a website using Django and used Mateailize CSS for styling and resp
         });
       });
     }
-  </script>
+  </script>-->
+	
+		<script>
+		 if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+          .then(function(registration) {
+                console.log('Service Worker Registered');
+          });
+
+        navigator.serviceWorker.ready.then(function(registration) {
+           console.log('Service Worker Ready');
+        });
+      }
+		</script>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
