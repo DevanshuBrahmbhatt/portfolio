@@ -33,7 +33,7 @@ self.addEventListener('fetch', event => {
       return fetch(event.request)
       .then(response => {
         if (response.status === 404) {
-          return caches.match('pages/404.html');
+          return caches.match('index.html');
         }
         return caches.open(staticCacheName)
         .then(cache => {
@@ -43,7 +43,7 @@ self.addEventListener('fetch', event => {
       });
     }).catch(error => {
       console.log('Error, ', error);
-      return caches.match('pages/offline.html');
+      return caches.match('index.html');
     })
   );
 });
