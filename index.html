@@ -9,6 +9,10 @@
 	<link rel="shotcut icon" type="images/png"  href="images/2.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="portfolio of webdeveloper " />
+	<link rel="manifest" href="manifest.webmanifest">
+	<meta name="theme-color" content="#ea6a43"/>
+	<link rel="apple-touch-icon" href="images/2.png">
+	
 	
 	<meta name="author" content="freehtml5.co" />
   
@@ -29,7 +33,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 	
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/animate.css?v=1">
 	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="css/icomoon.css">
 	<!-- Bootstrap  -->
@@ -51,7 +55,7 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">	
-	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image:url(images/back.jpg);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image:url(#);"  data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -89,8 +93,7 @@
 					<ul class="info">
 						<li><span class="first-block">Full Name:</span><span class="second-block">Devanshu Brahmbhatt</span></li>
 						<li><span class="first-block">Email:</span><span class="second-block">devanshu.vguj@gmail.com</span></li>
-						<li><span class="first-block">Website:</span><span class="second-block">www.yoursite.com</span></li>
-						
+												
 					</ul>
 				</div>
 				<div class="col-md-8">
@@ -170,6 +173,25 @@ We developed a website using Django and used Mateailize CSS for styling and resp
 								</div>
 							</div>
 						</li>
+						
+						<li class="timeline-inverted animate-box">
+							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Web-Developer</h3>
+									<span class="company">DSC- 2019-October - Current</span>
+								</div>
+								<div class="timeline-body">
+									<p>Developer Student Clubs is powered by Google Developers.<br>
+
+										The Developer Student Clubs (DSC) program is a grassroots channel through which
+										we provide development skills for students, towards employability. In addition to workshops,
+										we also provide an opportunity for students to apply their newly gained skills to develop solutions for 
+										local organizations, and then provide visibility via showcases..</p>
+								</div>
+							</div>
+						</li>
+						
 
 						<br>
 						<li class="timeline-heading text-center animate-box">
@@ -411,7 +433,7 @@ We developed a website using Django and used Mateailize CSS for styling and resp
 			</div>
 			<div class="row">
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://findgit.000webhostapp.com/" class="work" style="background-image: url(images/portfolio-1.jpg);">
+					<a href="https://findgit.netlify.com/" target="_blank"  class="work" style="background-image: url(images/portfolio-1.jpg);">
 						<div class="desc">
 							<h3>Github Finder</h3>
 						<!--	<span>Illustration</span>-->
@@ -419,7 +441,7 @@ We developed a website using Django and used Mateailize CSS for styling and resp
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://webmarker.000webhostapp.com/" class="work" style="background-image: url(images/portfolio-2.jpg);">
+					<a href="https://webmarker.000webhostapp.com/" target="_blank" class="work" style="background-image: url(images/portfolio-2.jpg);">
 						<div class="desc">
 							<h3>BookMarker</h3>
 							
@@ -427,14 +449,14 @@ We developed a website using Django and used Mateailize CSS for styling and resp
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://webmarker.000webhostapp.com/" class="work" style="background-image: url(images/portfolio-3.jpg);">
+					<a href="http://eco-desk.com/" class="work" target="_blank"  style="background-image: url(images/portfolio-3.jpg);">
 						<div class="desc">
 							<h3>Eco-desk</h3>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://infomovie.000webhostapp.com/#" class="work" style="background-image: url(images/portfolio-4.jpg);">
+					<a href="https://infomovie.netlify.com/" class="work" target="_blank"  style="background-image: url(images/portfolio-4.jpg);">
 						<div class="desc">
 							<h3>Movie-Information</h3>
 							
@@ -442,7 +464,7 @@ We developed a website using Django and used Mateailize CSS for styling and resp
 					</a>
 				</div>
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="http://www.slyro.in/" class="work" style="background-image: url(images/portfolio-5.jpg);">
+					<a href="http://www.slyro.in/" class="work" target="_blank"  style="background-image: url(images/portfolio-5.jpg);">
 						<div class="desc">
 							<h3>Slyro</h3>
 							
@@ -452,15 +474,36 @@ We developed a website using Django and used Mateailize CSS for styling and resp
 				
 				
 				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/DevanshuBrahmbhatt/Databaseproject" class="work" style="background-image: url(images/portfolio-7.jpg);">
+					<a href="https://github.com/DevanshuBrahmbhatt/Databaseproject" target="_blank"  class="work" style="background-image: url(images/portfolio-7.jpg);">
 						<div class="desc">
-							<h3>Database Project</h3>
-							<span>Working</span>
+							<h3>StudentCloud(Database Project)</h3>
+							
 						</div>
 					</a>
 				</div>
+				
+				<div class="col-md-3 text-center col-padding animate-box">
+					<a href="https://todolistdev.netlify.com/" class="work" target="_blank"  style="background-image: url(images/portfolio-5.jpg);">
+						<div class="desc">
+							<h3>To Do list (With Vue) </h3>
+							
+						</div>
+					</a>
+				</div>
+				
+				
+				<div class="col-md-3 text-center col-padding animate-box">
+					<a href="#" class="work" target="_blank"  style="background-image: url(images/portfolio-5.jpg);">
+						<div class="desc">
+							<h3>PullRequest(DSC) </h3>
+							<span>Working</span>
+							
+						</div>
+					</a>
+				</div>
+				
 			<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://devanshubrahmbhatt.blogspot.com/" class="work" style="background-image: url(images/portfolio-6.jpg);">
+					<a href="https://devanshubrahmbhatt.blogspot.com/"target="_blank"   class="work" style="background-image: url(images/portfolio-6.jpg);">
 						<div class="desc">
 							<h3>My Blogs</h3>
 							
@@ -628,6 +671,19 @@ We developed a website using Django and used Mateailize CSS for styling and resp
    </footer>
    </div>
 	
+	<script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+        .then(swReg => {
+          console.log('Service Worker is registered', swReg);
+        })
+        .catch(err => {
+          console.error('Service Worker Error', err);
+        });
+      });
+    }
+  </script>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -646,6 +702,8 @@ We developed a website using Django and used Mateailize CSS for styling and resp
 	
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	
+	
 
 	</body>
 </html>

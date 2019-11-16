@@ -1,3 +1,6 @@
+
+
+
 ;(function () {
 	
 	'use strict';
@@ -33,6 +36,18 @@
 			});
 		}
 	};
+	
+	
+	var fullWidth = function() {
+
+		if ( !isMobile.any() ) {
+			$('.js-fullwidth').css('width', $(window).width());
+			$(window).resize(function(){
+				$('.js-fullwidth').css('width', $(window).width());
+			});
+		}
+	};
+	
 
 	// Parallax
 	var parallax = function() {
